@@ -101,8 +101,15 @@ body {
         text-align: center;
     }
 
+    .imagen-lateral {
+        width: 100%; /* Que ocupe todo el ancho */
+        display: flex;
+        justify-content: center;
+    }
+
     .imagen-lateral img {
-        max-width: 90%; /* Ajustar imagen al ancho de pantalla */
+        max-width: 80%; /* Ajustar tamaño */
+        height: auto;
         margin-left: 0; /* Evitar separación innecesaria */
     }
 }
