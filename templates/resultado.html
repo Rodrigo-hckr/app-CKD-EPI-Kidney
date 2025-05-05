@@ -13,14 +13,17 @@
         <h1 class="text-center">Resultado <span class="highlight">CKD-EPI</span></h1>
 
         <div class="container text-center">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-12 col-md-6">
                     <p class="resultado-text">La <strong>TFG calculada</strong> es: <span class="resultado-num">{{ tfg }} mL/min/1.73m²</span></p>
                     <p class="resultado-estadio">Estadio ERC:<strong>{{ estadio }}</strong></p>
                 </div>
-                
+                <div class="col-12 col-md-6">
+                    <img src="{{ url_for('static', filename='estadio.png') }}" alt="Descripción de la imagen" class="resultado-img">
+                </div>
             </div>
         </div>
+        
 
         <div class="text-center mt-3">
             <a href="/" class="btn btn-primary">Volver</a>
