@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     background-color: #76a2a2;
     color: white;
@@ -6,11 +7,11 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Contenedor general */
+/* Contenedor principal */
 .container {
-    /*width: 90%;*/
     max-width: 90%;
     margin: auto;
     padding: 20px;
@@ -20,16 +21,24 @@ body {
     text-align: center;
 }
 
-/* Estilo del resultado */
+/* Logo */
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 80%;
+    height: auto;
+}
+
+/* Resultados */
 .resultado-card {
-    background-color: #ef6502; /* Color destacado */
+    background-color: #ef6502;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
 }
 
-.resultado-text {
+.resultado-text, .resultado-estadio {
     font-size: 18px;
     font-weight: bold;
     color: white;
@@ -41,13 +50,21 @@ body {
     color: #fff;
 }
 
+/* Imagen de estadio */
+.img-fluid {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Botón de regreso */
 .btn-primary {
     background-color: #76a2a2;
     border: none;
     font-size: 18px;
     padding: 12px 20px;
-    border-radius: 30px; /* Bordes redondeados para un diseño moderno */
+    border-radius: 30px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
     text-transform: uppercase;
@@ -55,72 +72,37 @@ body {
 
 .btn-primary:hover {
     background-color: #5e8585;
-    transform: scale(1.05); /* Efecto de crecimiento al pasar el cursor */
+    transform: scale(1.05);
     box-shadow: 0px 6px 12px rgba(0,0,0,0.3);
 }
 
-
-/* Logo */
-.logo {
-    display: block;
-    margin: 0 auto;
-    max-width: 80%;
-    height: auto;
-}
-/* estadio */
-.resultado-estadio {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    margin-top: 10px;
-}
-
-.resultado-container {
-    display: flex;
-    align-items: center; /* Alinea verticalmente */
-    justify-content: space-between; /* Espacia los elementos */
-    width: 100%;
-}
-
-.resultado-card {
-    flex: 1; /* Permite que la tabla ocupe espacio */
-}
-
-.imagen-lateral img {
-    width: 100%;
-    max-width: 300px; /* Ajusta el tamaño de la imagen */
-    /*margin-left: 20px; /* Espacio entre la imagen y la tabla */
-    height: auto;
-    /*border-radius: 20px;*/
-}
-
+/* Responsive */
 @media screen and (max-width: 768px) {
-    .resultado-container {
-        flex-direction: column; /* Apilar elementos */
-        align-items: center; /* Centrar */
-        text-align: center;
+    .container {
+        width: 95%;
+        padding: 15px;
     }
 
-    .imagen-lateral {
-        width: 100%; /* Que ocupe todo el ancho */
-        display: flex;
-        justify-content: center;
+    .resultado-text, .resultado-estadio {
+        font-size: 16px;
     }
 
-    .imagen-lateral img {
-        max-width: 80%; /* Ajustar tamaño */
-        height: auto;
-        margin-left: 0; /* Evitar separación innecesaria */
+    .img-fluid {
+        max-width: 80%;
     }
 }
 
 @media screen and (max-width: 480px) {
     .resultado-text, .resultado-estadio {
-        font-size: 16px; /* Reducir tamaño de texto */
+        font-size: 14px;
     }
 
     .btn-primary {
         font-size: 16px;
         padding: 10px 15px;
+    }
+
+    .img-fluid {
+        max-width: 90%;
     }
 }
