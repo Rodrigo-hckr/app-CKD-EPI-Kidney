@@ -10,6 +10,7 @@ body {
 
 /* Contenedor general */
 .container {
+    width: 90%;
     max-width: 500px;
     background: white;
     padding: 20px;
@@ -90,3 +91,26 @@ body {
     border-radius: 20px;
 }
 
+@media screen and (max-width: 768px) {
+    .resultado-container {
+        flex-direction: column; /* Apilar elementos */
+        align-items: center; /* Centrar */
+        text-align: center;
+    }
+
+    .imagen-lateral img {
+        max-width: 90%; /* Ajustar imagen al ancho de pantalla */
+        margin-left: 0; /* Evitar separación innecesaria */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .resultado-text, .resultado-estadio {
+        font-size: 16px; /* Reducir tamaño de texto */
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
